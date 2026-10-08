@@ -9,8 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/kafka-basics" />
             <option value="$PROJECT_DIR$/kafka-producer-wikimedia" />
-            <option value="$PROJECT_DIR$/kakfa-basics" />
           </set>
         </option>
       </GradleProjectSettings>
