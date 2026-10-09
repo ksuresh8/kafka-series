@@ -42,11 +42,11 @@ public class WikimediaChangesProducer {
                 ConnectStrategy.http(URI.create(url))
                         .header("User-Agent", "Mozilla/5.0 (compatible; KafkaProducer/1.0; +https://example.com)")
         );
-        try (BackgroundEventSource eventSource = new BackgroundEventSource.Builder(eventHandler, eventSourceBuilder).build()) {
-            eventSource.start();
-        }
+        BackgroundEventSource eventSource = new BackgroundEventSource.Builder(eventHandler, eventSourceBuilder).build();
+        eventSource.start();
 
-        //TimeUnit.MINUTES.sleep(10);
-        TimeUnit.SECONDS.sleep(5);
+        //TimeUnit.MINUTES.sleep(1);
+        TimeUnit.SECONDS.sleep(15);
+        eventSource.close();
     }
 }
